@@ -1,0 +1,118 @@
+/* frontend/src/components/Genres/GenresEdit.css */
+/* Estilos para o formulário de criação/edição de gêneros. */
+
+.genre-edit-container {
+    max-width: 600px; /* Largura máxima do container */
+    margin: 30px auto; /* Centraliza na página */
+    padding: 30px; /* Espaçamento interno */
+    background-color: #fff; /* Fundo branco */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    font-family: "Arial", sans-serif; /* Fonte padrão */
+    color: #333; /* Cor do texto padrão */
+}
+
+.genre-edit-title {
+    font-size: 2.4rem; /* Tamanho do título */
+    color: #34495e; /* Cor do título */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 30px; /* Margem inferior */
+    border-bottom: 2px solid #5fa2dd; /* Linha de separação */
+    padding-bottom: 10px; /* Espaçamento da linha */
+}
+
+.genre-edit-loading {
+    text-align: center; /* Centraliza texto */
+    padding: 20px; /* Preenchimento */
+    font-size: 1.2rem; /* Tamanho da fonte */
+    color: #6c757d; /* Cor do texto */
+}
+
+.genre-edit-form .form-group {
+    margin-bottom: 20px; /* Margem inferior para grupos de formulário */
+}
+
+.genre-edit-form label {
+    display: block; /* Ocupa a largura total */
+    margin-bottom: 8px; /* Margem inferior */
+    font-weight: bold; /* Negrito */
+    color: #555; /* Cor do texto */
+    font-size: 1.1rem; /* Tamanho da fonte */
+}
+
+.genre-edit-form .form-input,
+.genre-edit-form .form-textarea {
+    width: 100%; /* Ocupa a largura total disponível */
+    padding: 12px; /* Preenchimento interno */
+    border: 1px solid #ced4da; /* Borda padrão */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 1rem; /* Tamanho da fonte */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+.genre-edit-form .form-input:focus,
+.genre-edit-form .form-textarea:focus {
+    border-color: #007bff; /* Borda azul ao focar */
+    outline: none; /* Remove o contorno padrão do navegador */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Sombra suave ao focar */
+}
+
+.genre-edit-form .form-textarea {
+    resize: vertical; /* Permite redimensionamento vertical pelo usuário */
+    min-height: 80px; /* Altura mínima */
+}
+
+.genre-edit-error {
+    color: #dc3545; /* Cor de erro */
+    background-color: #f8d7da; /* Fundo para erro */
+    border: 1px solid #f5c6cb; /* Borda para erro */
+    padding: 10px; /* Preenchimento */
+    border-radius: 5px; /* Cantos arredondados */
+    margin-bottom: 20px; /* Margem inferior */
+    text-align: center; /* Centraliza texto */
+}
+
+.form-submit-button,
+.form-back-button {
+    padding: 12px 25px; /* Preenchimento */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 1.1rem; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background-color 0.2s ease, transform 0.1s ease; /* Transições suaves */
+    margin-top: 15px; /* Margem superior */
+    display: inline-block; /* Permite posicionamento lado a lado */
+    width: auto; /* Largura automática */
+}
+
+.form-submit-button {
+    background-color: #28a745; /* Verde para salvar */
+    color: white; /* Cor do texto */
+    margin-right: 15px; /* Margem à direita */
+}
+
+.form-submit-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.form-submit-button:disabled {
+    background-color: #a2d9a7; /* Cor desabilitada */
+    cursor: not-allowed; /* Cursor de não permitido */
+}
+
+.form-back-button {
+    background-color: #6c757d; /* Cinza para voltar */
+    color: white;
+}
+
+.form-back-button:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+.form-back-button:disabled {
+    background-color: #b0b5ba;
+    cursor: not-allowed;
+}

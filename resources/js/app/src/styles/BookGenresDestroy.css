@@ -1,0 +1,38 @@
+/* frontend/src/components/BookGenres/BookGenresDestroy.css */
+
+.book-genre-destroy-button {
+    background-color: #dc3545; /* Vermelho padrão para exclusão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-left: 15px; /* Espaçamento da margem esquerda */
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    min-width: 120px; /* Garante que o botão tenha um tamanho mínimo */
+    text-align: center;
+}
+
+.book-genre-destroy-button:hover {
+    background-color: #c82333; /* Vermelho mais escuro ao passar o mouse */
+    transform: translateY(-1px); /* Pequeno efeito de elevação */
+}
+
+.book-genre-destroy-button:active {
+    transform: translateY(0); /* Efeito de "clique" */
+}
+
+.book-genre-destroy-button:disabled {
+    background-color: #e0a8a8; /* Cor acinzentada quando desabilitado */
+    cursor: not-allowed; /* Cursor de "não permitido" */
+    opacity: 0.7;
+}
+
+.book-genre-destroy-error {
+    color: #dc3545; /* Cor de erro */
+    font-size: 0.8em;
+    margin-top: 5px;
+    text-align: center;
+}

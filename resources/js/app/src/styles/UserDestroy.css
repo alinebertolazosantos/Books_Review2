@@ -1,0 +1,39 @@
+/* frontend/src/components/Users/UserDestroy.css */
+/* Estilos para o botão de exclusão de um usuário. */
+
+.user-destroy-button {
+    background-color: #dc3545; /* Vermelho padrão para exclusão */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Cantos arredondados */
+    padding: 8px 15px; /* Preenchimento interno */
+    cursor: pointer; /* Cursor de ponteiro */
+    font-size: 0.9rem; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    margin-left: 15px; /* Espaçamento da margem esquerda */
+    transition: background-color 0.2s ease, transform 0.1s ease; /* Transições suaves */
+    min-width: 120px; /* Garante que o botão tenha um tamanho mínimo */
+    text-align: center; /* Centraliza o texto */
+}
+
+.user-destroy-button:hover {
+    background-color: #c82333; /* Vermelho mais escuro ao passar o mouse */
+    transform: translateY(-1px); /* Pequeno efeito de elevação */
+}
+
+.user-destroy-button:active {
+    transform: translateY(0); /* Efeito de "clique" */
+}
+
+.user-destroy-button:disabled {
+    background-color: #e0a8a8; /* Cor acinzentada quando desabilitado */
+    cursor: not-allowed; /* Cursor de "não permitido" */
+    opacity: 0.7; /* Opacidade reduzida */
+}
+
+.user-destroy-error {
+    color: #dc3545; /* Cor de erro */
+    font-size: 0.8em; /* Tamanho da fonte menor */
+    margin-top: 5px; /* Margem superior */
+    text-align: center; /* Centraliza o texto */
+}

@@ -1,0 +1,140 @@
+/* frontend/src/components/Reviews/ReviewsList.css */
+/* Estilos para a lista de avaliações. */
+
+.reviews-list-container {
+    max-width: 900px; /* Largura máxima do container da lista */
+    margin: 30px auto; /* Centraliza o container na página */
+    padding: 25px; /* Espaçamento interno */
+    background-color: #fff; /* Fundo branco */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    font-family: "Arial", sans-serif; /* Fonte padrão */
+    color: #333; /* Cor do texto padrão */
+}
+
+.reviews-list-title {
+    font-size: 2.5rem; /* Tamanho do título */
+    color: #2c3e50; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 30px; /* Margem inferior */
+    border-bottom: 2px solid #3498db; /* Linha de separação */
+    padding-bottom: 15px; /* Preenchimento inferior da linha */
+}
+
+.reviews-list-add-button {
+    display: block; /* Ocupa a largura total disponível */
+    width: fit-content; /* Largura se ajusta ao conteúdo */
+    margin: 0 auto 25px auto; /* Centraliza horizontalmente e adiciona margem inferior */
+    background-color: #28a745; /* Cor de fundo verde (para adicionar) */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Cantos arredondados */
+    padding: 12px 25px; /* Preenchimento interno */
+    font-size: 1.1rem; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background-color 0.2s ease; /* Transição suave na cor de fundo */
+}
+
+.reviews-list-add-button:hover {
+    background-color: #218838; /* Cor mais escura ao passar o mouse */
+}
+
+.reviews-list {
+    list-style: none; /* Remove marcadores de lista */
+    padding: 0; /* Remove preenchimento padrão da lista */
+}
+
+.reviews-list-item {
+    background-color: #f8f9fa; /* Cor de fundo clara para cada item */
+    border: 1px solid #e9ecef; /* Borda fina */
+    border-radius: 8px; /* Cantos arredondados */
+    margin-bottom: 15px; /* Margem inferior entre os itens */
+    padding: 15px 20px; /* Preenchimento interno */
+    display: flex; /* Layout flexível */
+    justify-content: space-between; /* Espaço entre as informações e as ações */
+    align-items: center; /* Alinha itens verticalmente ao centro */
+    transition: box-shadow 0.2s ease; /* Transição suave na sombra */
+}
+
+.reviews-list-item:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Sombra ao passar o mouse */
+}
+
+.review-item-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Permite que as informações ocupem o espaço restante */
+}
+
+.review-item-rating {
+    font-size: 1.3rem; /* Tamanho da fonte da classificação */
+    color: #34495e; /* Cor da classificação */
+    font-weight: bold; /* Negrito */
+    margin-bottom: 5px; /* Pequena margem abaixo da classificação */
+}
+
+.review-item-comment {
+    font-size: 1rem; /* Tamanho da fonte do comentário */
+    color: #555; /* Cor do comentário */
+    font-style: italic; /* Itálico para o comentário */
+    margin-bottom: 5px;
+}
+
+.review-item-book-user {
+    font-size: 0.95rem; /* Tamanho da fonte para informações de livro/usuário */
+    color: #6c757d; /* Cor mais suave */
+}
+
+.reviews-list-actions {
+    display: flex; /* Layout flexível para os botões de ação */
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+.reviews-list-button {
+    padding: 8px 15px; /* Preenchimento interno */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Cursor de ponteiro */
+    font-size: 0.95rem; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    transition: background-color 0.2s ease; /* Transição suave na cor de fundo */
+    text-decoration: none; /* Remove sublinhado para links */
+    display: inline-block; /* Permite margens e padding como bloco */
+}
+
+.reviews-list-button.details {
+    background-color: #007bff; /* Cor azul para detalhes */
+    color: white; /* Cor do texto */
+}
+
+.reviews-list-button.details:hover {
+    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+}
+
+.reviews-list-button.edit {
+    background-color: #ffc107; /* Cor amarela para editar */
+    color: #333; /* Cor do texto */
+}
+
+.reviews-list-button.edit:hover {
+    background-color: #e0a800; /* Amarelo mais escuro ao passar o mouse */
+}
+
+.reviews-list-loading,
+.reviews-list-error {
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Preenchimento interno */
+    font-size: 1.1rem; /* Tamanho da fonte */
+    color: #6c757d; /* Cor do texto (cinza) */
+}
+
+.reviews-list-error {
+    color: #dc3545; /* Cor vermelha para erros */
+}
+
+.reviews-list-no-data {
+    text-align: center; /* Centraliza o texto */
+    color: #6c757d; /* Cor do texto (cinza) */
+    font-style: italic; /* Texto em itálico */
+    padding: 20px; /* Preenchimento interno */
+}

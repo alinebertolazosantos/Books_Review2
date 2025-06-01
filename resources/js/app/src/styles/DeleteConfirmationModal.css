@@ -1,0 +1,94 @@
+/* frontend/src/components/DeleteConfirmationModal.css */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo mais escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px; /* Bordas mais arredondadas */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Sombra mais pronunciada */
+    width: 450px;
+    max-width: 90%;
+    text-align: center;
+    animation: fadeIn 0.3s ease-out; /* Animação de entrada */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center; /* Centraliza os botões */
+    gap: 15px; /* Espaçamento entre os botões */
+}
+
+/* Estilos básicos para botões do modal */
+.modal-button {
+    padding: 12px 25px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.05rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    min-width: 100px;
+}
+
+.modal-button:hover {
+    transform: translateY(-2px); /* Efeito de elevação sutil */
+}
+
+.modal-button:active {
+    transform: translateY(0); /* Efeito de "clique" */
+}
+
+.modal-button.cancel {
+    background-color: #6c757d; /* Cinza para cancelar */
+    color: white;
+}
+
+.modal-button.cancel:hover {
+    background-color: #5a6268;
+}
+
+.modal-button.delete {
+    background-color: #dc3545; /* Vermelho para exclusão */
+    color: white;
+}
+
+.modal-button.delete:hover {
+    background-color: #c82333; /* Um vermelho um pouco mais escuro ao passar o mouse */
+}

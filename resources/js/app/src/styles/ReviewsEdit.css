@@ -1,0 +1,129 @@
+/* frontend/src/components/Reviews/ReviewsEdit.css */
+/* Estilos para o formulário de criação/edição de avaliações. */
+
+.review-edit-container {
+    max-width: 700px; /* Largura máxima do container */
+    margin: 30px auto; /* Centraliza na página */
+    padding: 30px; /* Espaçamento interno */
+    background-color: #fff; /* Fundo branco */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    font-family: "Arial", sans-serif; /* Fonte padrão */
+    color: #333; /* Cor do texto padrão */
+}
+
+.review-edit-title {
+    font-size: 2.4rem; /* Tamanho do título */
+    color: #34495e; /* Cor do título */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 30px; /* Margem inferior */
+    border-bottom: 2px solid #5fa2dd; /* Linha de separação */
+    padding-bottom: 10px; /* Espaçamento da linha */
+}
+
+.review-edit-loading {
+    text-align: center; /* Centraliza texto */
+    padding: 20px; /* Preenchimento */
+    font-size: 1.2rem; /* Tamanho da fonte */
+    color: #6c757d; /* Cor do texto */
+}
+
+.review-edit-form .form-group {
+    margin-bottom: 20px; /* Margem inferior para grupos de formulário */
+}
+
+.review-edit-form label {
+    display: block; /* Ocupa a largura total */
+    margin-bottom: 8px; /* Margem inferior */
+    font-weight: bold; /* Negrito */
+    color: #555; /* Cor do texto */
+    font-size: 1.1rem; /* Tamanho da fonte */
+}
+
+.review-edit-form .form-input,
+.review-edit-form .form-textarea,
+.review-edit-form .form-select {
+    width: 100%; /* Ocupa a largura total disponível */
+    padding: 12px; /* Preenchimento interno */
+    border: 1px solid #ced4da; /* Borda padrão */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 1rem; /* Tamanho da fonte */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+.review-edit-form .form-input:focus,
+.review-edit-form .form-textarea:focus,
+.review-edit-form .form-select:focus {
+    border-color: #007bff; /* Borda azul ao focar */
+    outline: none; /* Remove o contorno padrão do navegador */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Sombra suave ao focar */
+}
+
+.review-edit-form .form-textarea {
+    resize: vertical; /* Permite redimensionamento vertical pelo usuário */
+    min-height: 80px; /* Altura mínima */
+}
+
+.review-edit-form .form-select {
+    appearance: none; /* Remove estilo padrão do sistema operacional */
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007bff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13%205.4L146.2%20202.7%2018.8%2074.8a17.6%2017.6%200%200%0A0-25.3%2024.9%2024.9%200%200%200%200%2035.3l127.3%20128.8a17.6%2017.6%200%200%200%2025.3%200l127.3-128.8c9.8-9.9%209.8-26%200-35.9-4.9-4.8-11.2-7.2-17.6-7.2z%22%2F%3E%3C%2Fsvg%3E"); /* Ícone de seta para baixo */
+    background-repeat: no-repeat;
+    background-position: right 0.7em top 50%;
+    background-size: 0.65em auto;
+    padding-right: 2.5em; /* Espaço para o ícone */
+}
+
+.review-edit-error {
+    color: #dc3545; /* Cor de erro */
+    background-color: #f8d7da; /* Fundo para erro */
+    border: 1px solid #f5c6cb; /* Borda para erro */
+    padding: 10px; /* Preenchimento */
+    border-radius: 5px; /* Cantos arredondados */
+    margin-bottom: 20px; /* Margem inferior */
+    text-align: center; /* Centraliza texto */
+}
+
+.form-submit-button,
+.form-back-button {
+    padding: 12px 25px; /* Preenchimento */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 1.1rem; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background-color 0.2s ease, transform 0.1s ease; /* Transições suaves */
+    margin-top: 15px; /* Margem superior */
+    display: inline-block; /* Permite posicionamento lado a lado */
+    width: auto; /* Largura automática */
+}
+
+.form-submit-button {
+    background-color: #28a745; /* Verde para salvar */
+    color: white; /* Cor do texto */
+    margin-right: 15px; /* Margem à direita */
+}
+
+.form-submit-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.form-submit-button:disabled {
+    background-color: #a2d9a7; /* Cor desabilitada */
+    cursor: not-allowed; /* Cursor de não permitido */
+}
+
+.form-back-button {
+    background-color: #6c757d; /* Cinza para voltar */
+    color: white;
+}
+
+.form-back-button:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+.form-back-button:disabled {
+    background-color: #b0b5ba;
+    cursor: not-allowed;
+}

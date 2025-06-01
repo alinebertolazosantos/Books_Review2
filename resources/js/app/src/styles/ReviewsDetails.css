@@ -1,0 +1,118 @@
+/* frontend/src/components/Reviews/ReviewsDetails.css */
+/* Estilos para a página de detalhes de uma avaliação. */
+
+.review-details-container {
+    max-width: 700px; /* Largura máxima do container */
+    margin: 30px auto; /* Centraliza na página */
+    padding: 30px; /* Espaçamento interno */
+    background-color: #fff; /* Fundo branco */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    font-family: "Arial", sans-serif; /* Fonte padrão */
+    color: #333; /* Cor do texto padrão */
+}
+
+.review-details-title {
+    font-size: 2.8rem; /* Tamanho do título */
+    color: #2c3e50; /* Cor do título */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 35px; /* Margem inferior */
+    border-bottom: 2px solid #5fa2dd; /* Linha de separação */
+    padding-bottom: 15px; /* Espaçamento da linha */
+}
+
+.review-details-loading,
+.review-details-error,
+.review-details-not-found {
+    text-align: center; /* Centraliza texto */
+    padding: 20px; /* Preenchimento */
+    font-size: 1.2rem; /* Tamanho da fonte */
+    color: #6c757d; /* Cor do texto */
+    background-color: #e9ecef; /* Fundo claro */
+    border-radius: 8px; /* Cantos arredondados */
+    margin: 20px auto; /* Margem e centralização */
+    max-width: 600px;
+}
+
+.review-details-error {
+    background-color: #f8d7da; /* Fundo para erro */
+    color: #721c24; /* Cor do texto para erro */
+    border: 1px solid #f5c6cb; /* Borda para erro */
+}
+
+.review-details-not-found {
+    background-color: #fff3cd; /* Fundo para não encontrado */
+    color: #856404; /* Cor do texto para não encontrado */
+    border: 1px solid #ffeeba; /* Borda para não encontrado */
+}
+
+.review-details-info p {
+    font-size: 1.15rem; /* Tamanho da fonte para parágrafos */
+    margin-bottom: 12px; /* Margem inferior */
+    line-height: 1.6; /* Altura da linha */
+}
+
+.review-details-info p strong {
+    color: #495057; /* Cor para texto em negrito */
+    margin-right: 5px; /* Espaçamento */
+}
+
+.review-details-info p a {
+    color: #007bff; /* Cor do link */
+    text-decoration: none; /* Sem sublinhado */
+}
+
+.review-details-info p a:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+.review-details-comment {
+    background-color: #f0f8ff; /* Fundo para o comentário */
+    padding: 15px; /* Preenchimento */
+    border-left: 5px solid #007bff; /* Borda esquerda azul */
+    border-radius: 5px; /* Cantos arredondados */
+    margin-top: 25px; /* Margem superior */
+    margin-bottom: 25px; /* Margem inferior */
+    font-style: italic; /* Texto em itálico */
+}
+
+.review-details-actions {
+    margin-top: 40px; /* Margem superior */
+    display: flex; /* Layout flexível */
+    justify-content: center; /* Centraliza os botões */
+    gap: 20px; /* Espaçamento entre botões */
+}
+
+.review-details-button {
+    padding: 12px 25px; /* Preenchimento */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 1.05rem; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background-color 0.2s ease, transform 0.1s ease; /* Transições */
+    min-width: 150px; /* Largura mínima */
+    text-align: center; /* Centraliza texto */
+    text-decoration: none; /* Remove sublinhado para links */
+    display: inline-block; /* Permite margens e padding como bloco */
+}
+
+.review-details-button.edit {
+    background-color: #ffc107; /* Amarelo para editar */
+    color: #333; /* Cor do texto */
+}
+
+.review-details-button.edit:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
+
+.review-details-button.back {
+    background-color: #6c757d; /* Cinza para voltar */
+    color: white;
+}
+
+.review-details-button.back:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
