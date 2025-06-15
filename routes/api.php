@@ -1,14 +1,29 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
+// Controllers
 use App\Http\Controllers\CustomUserController;
-use App\Http\Controllers\GenreController; 
+use App\Http\Controllers\GenreController;
 use App\Http\Controllers\PublisherController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\BookGenreController;
 use App\Http\Controllers\ReadingStatusController;
 use App\Http\Controllers\ReviewController;
-// Custom Users
+use App\Http\Controllers\AuthController;
+
+
+
+//Auth (Sanctum)
+Route::post('/login', [AuthController::class, 'login']);
+Route::middleware('auth:sanctum')->post('/logout', [AuthController::class, 'logout']);
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+    return $request->user();
+});
+
+
+//Custom Users
 Route::prefix('custom-users')->group(function () {
     Route::get('/', [CustomUserController::class, 'index']);
     Route::post('/', [CustomUserController::class, 'store']);
@@ -17,16 +32,18 @@ Route::prefix('custom-users')->group(function () {
     Route::delete('/{id}', [CustomUserController::class, 'destroy']);
 });
 
+// Books
+Route::apiResource('books', BookController::class);
+
+
 // Genres
 Route::apiResource('genres', GenreController::class);
+
 
 // Publishers
 Route::apiResource('publishers', PublisherController::class);
 
-// Books
-Route::apiResource('books', BookController::class);
-
-// BookGenre
+// Book-Genre Relationship
 Route::prefix('book-genre')->group(function () {
     Route::get('/', [BookGenreController::class, 'index']);
     Route::post('/', [BookGenreController::class, 'store']);
@@ -35,7 +52,11 @@ Route::prefix('book-genre')->group(function () {
     Route::delete('/{id}', [BookGenreController::class, 'destroy']);
 });
 
-// Reading Statuses
+
+//Reading Statuses
+
 Route::apiResource('reading-statuses', ReadingStatusController::class);
 
+
+// Reviews
 Route::apiResource('reviews', ReviewController::class);

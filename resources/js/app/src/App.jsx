@@ -1,17 +1,16 @@
-// src/App.jsx
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import BooksPage from "./pages/BooksPage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import BookList from "./pages/BookList";
 
-const App = () => {
+function App() {
     return (
-        <Router>
+        <BrowserRouter>
             <Routes>
-                <Route path="/books" element={<BooksPage />} />
-                {/* Outras rotas futuras */}
+                <Route path="/login" element={<Login />} />
+                <Route path="/livros" element={<BookList />} />
             </Routes>
-        </Router>
+        </BrowserRouter>
     );
-};
+}
 
 export default App;

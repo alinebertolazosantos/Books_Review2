@@ -1,11 +1,9 @@
+// src/services/api.js
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "http://127.0.0.1:8000/api", // URL da sua API Laravel
-    headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-    },
+    baseURL: "http://localhost:8000/api", // ou a URL da sua API
+    withCredentials: true, // necessário para Sanctum
 });
 
 export default api;
