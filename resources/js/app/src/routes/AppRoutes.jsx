@@ -27,6 +27,7 @@ function App() {
                 <Route path="/reviews" element={<ReviewsPage />} />
                 <Route path="/usuario" element={<UserPage />} />
                 <Route path="/livro/:id" element={<BookDetailsPage />} />
+                <Route path="/register" element={<Signup />} />
             </Routes>
         </BrowserRouter>
     );
