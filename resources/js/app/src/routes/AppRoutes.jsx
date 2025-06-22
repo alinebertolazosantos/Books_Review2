@@ -9,6 +9,7 @@ import ReadingStatusesPage from "./pages/ReadingStatusesPage";
 import ReviewsPage from "./pages/ReviewsPage";
 import UserPage from "./pages/UserPage";
 import BookDetailsPage from "./pages/BookDetailsPage";
+import ResetPassword from "./pages/ResetPassword";
 
 function App() {
     return (
@@ -28,6 +29,11 @@ function App() {
                 <Route path="/usuario" element={<UserPage />} />
                 <Route path="/livro/:id" element={<BookDetailsPage />} />
                 <Route path="/register" element={<Signup />} />
+
+                <Route
+                    path="/reset-password/:id/:token"
+                    element={<ResetPassword />}
+                />
             </Routes>
         </BrowserRouter>
     );

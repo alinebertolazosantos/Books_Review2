@@ -62,3 +62,15 @@ Route::apiResource('reading-statuses', ReadingStatusController::class);
 
 // Reviews
 Route::apiResource('reviews', ReviewController::class);
+
+//Forgot Password
+Route::post('/forgot-password', [AuthController::class, 'forgotPassword']);
+
+//Reset Password
+Route::post('/reset-password/{id}/{token}', [AuthController::class, 'resetPassword']);
+
+//Change Password
+Route::middleware('auth:sanctum')->post('/change-password', [AuthController::class, 'changePassword']);
+
+//Reset Password
+Route::post('/reset-password/{id}/{token}', [AuthController::class, 'resetPassword']);
